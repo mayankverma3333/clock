@@ -1,0 +1,63 @@
+<!Doctype html>
+<html>
+    <head>
+        <style>
+            body{
+                background-image:linear-gradient(to bottom,rgb(238, 237, 166),rgb(17, 17, 61));
+                background-repeat:no-repeat;
+               
+            }
+            canvas{
+                display:block;
+                margin:auto;
+                margin-top:50px;
+            
+            }
+            input{
+                width:200px;
+                margin:auto;
+                display:block;
+                text-align:center;
+                background-color:black;
+                border:2px solid pink;
+                color:pink;
+                border-radius:4px;
+            }
+            #btn{
+                width:80px;
+                border-style:none;
+                background-color:rgba(0,0,0,0.5);
+                margin-top:20px;
+                font-size:14px;
+                
+            }
+            #btn:focus{
+                outline-style:none;
+            }
+            #btn:hover{
+                background-color:rgba(0,0,0);
+            }
+            div{
+                margin-top:150px;
+                text-align:center;
+            }
+            input:focus{
+                outline-style:none;
+            }
+            label{
+                color:pink;
+                font-size:16px;
+            }
+        </style>
+    </head>
+    <body onload="draw()">
+        <div>
+            <label>Alarm:</label>
+            <input type="time" name="time">
+            <input type="button" id="btn" value="stop alarm">
+            <audio src="alarm.mp3"></audio>
+            <canvas></canvas>
+        </div>
+        <script src="clock.js"></script>
+    </body>
+</html>
